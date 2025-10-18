@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidor DPS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="dps-meter">
+        <header class="controls">
+            <div class="sync-button" id="sync-button" title="Refresh">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+            <button class="control-button always-clickable" id="reset-button" title="Reset" style="display: none;"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <!-- Botón de mover ventana (drag) -->
+            <div class="drag-indicator drag-button" id="drag-indicator" title="Mover ventana">
+                <i class="fa-solid fa-up-down-left-right"></i>
+            </div>
+            <!-- Botón Nearby/Solo -->
+            <button class="control-button advanced-lite-btn always-clickable" id="nearby-group-btn" title="Toggle Nearby/Solo">Nearby</button>
+            <!-- Espaciador -->
+            <div style="flex: 1;"></div>
+            <!-- Botones de ordenamiento -->
+            <button class="sort-button always-clickable active" id="sort-dmg-btn" title="Sort by Total DMG">DMG</button>
+            <button class="sort-button always-clickable" id="sort-tank-btn" title="Sort by DMG Taken">TANK</button>
+            <button class="sort-button always-clickable" id="sort-heal-btn" title="Sort by Total Heal">HEAL</button>
+            <!-- Espaciador -->
+            <div style="flex: 1;"></div>
+            <!-- Botón de bloqueo/desbloqueo -->
+            <button class="control-button lock-button" id="lock-button" title="Lock position"><i class="fa-solid fa-lock-open"></i></button>
+            <button class="control-button close-button" id="close-button" title="Close window"><i class="fa-solid fa-xmark"></i></button>
+        </header>
+        <div id="loading-indicator">
+            <i class="fa-solid fa-spinner fa-spin"></i>
+        </div>
+        <main id="player-bars-container" style="display: none;"></main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
